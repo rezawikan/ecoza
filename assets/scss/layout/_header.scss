@@ -257,7 +257,7 @@
 // Site logo
 .site-logo {
   width: ($logo-width + 25);
-  padding: 12px 0 12px 25px;
+  padding: 12px 0 0px 25px;
   text-decoration: none;
   > img {
     display: block;
@@ -283,11 +283,11 @@
     align: center;
     decoration: none;
   }
-  &::before {
-    display: inline-block;
-    font-family: feather;
-    content: '\e120';
-  }
+  // &::before {
+  //   display: inline-block;
+  //   font-family: feather;
+  //   content: '\e120';
+  // }
   &:hover { color: $nav-link-hover-color; }
   &.menu-toggle { display: none; }
 }
@@ -402,7 +402,11 @@
       align: center;
       decoration: none;
     }
-    > i { line-height: $navbar-tools-size - 5; }
+    > svg {
+      line-height: $navbar-tools-size - 5;
+      height: 100%;
+      vertical-align: middle !important;
+    }
     > a {
       display: block;
       position: absolute;
@@ -427,7 +431,10 @@
   }
 
   // Search
-  .search  > svg { line-height: $navbar-tools-size - 4; }
+  .search  > svg {
+    line-height: $navbar-tools-size - 4;
+    height: 100%;
+  }
 
   // Cart
   .cart {
