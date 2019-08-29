@@ -52,7 +52,7 @@ export default {
     component: 'fa',
     imports: [{
         set: '@fortawesome/free-solid-svg-icons',
-        icons: ['faEnvelope','faPhone', 'faDownload']
+        icons: ['faEnvelope','faPhone', 'faDownload', 'faTimes', 'faSearch', 'faSignOutAlt', 'faUser']
       },
       {
         set: '@fortawesome/free-brands-svg-icons',
