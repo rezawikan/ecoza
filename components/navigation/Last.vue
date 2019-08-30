@@ -1,7 +1,7 @@
 <template lang="html">
   <div>
     <!-- Back To Top Button-->
-    <a class="scroll-to-top-btn" href="#">
+    <a v-scroll-to="scrollto" class="scroll-to-top-btn" href="#">
       <i class="icon-arrow-up" />
     </a>
     <!-- Backdrop-->
@@ -11,6 +11,18 @@
 
 <script>
 export default {
+  computed: {
+    scrollto() {
+      return {
+        el: 'html',
+        container: 'body',
+        duration: 500,
+        easing: 'ease',
+        x: false,
+        y: true
+      }
+    }
+  }
 }
 </script>
 

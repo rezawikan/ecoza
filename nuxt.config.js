@@ -75,7 +75,8 @@ export default {
 	 */
 	modules: [
 		'@nuxtjs/eslint-module',
-		'nuxt-fontawesome'
+		'nuxt-fontawesome',
+		'vue-scrollto/nuxt'
 	],
 
 	// fontawesome configuration

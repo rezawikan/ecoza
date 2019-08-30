@@ -20,6 +20,9 @@
             </a>
             <span class="sub-menu-toggle" /></span>
           <ul class="offcanvas-submenu">
+            <li class="back-btn">
+              <a href="#">Back</a>
+            </li>
             <li class="active">
               <a href="index.html">Featured Products Slider</a>
             </li>
@@ -36,6 +39,9 @@
             <span class="sub-menu-toggle" /></span>
           </span>
           <ul class="offcanvas-submenu">
+            <li class="back-btn">
+              <a href="#">Back</a>
+            </li>
             <li><a href="shop-categories.html">Shop Categories</a></li>
             <li class="has-children">
               <span>
@@ -45,6 +51,9 @@
                 <span class="sub-menu-toggle" />
               </span>
               <ul class="offcanvas-submenu">
+                <li class="back-btn">
+                  <a href="#">Back</a>
+                </li>
                 <li><a href="shop-grid-ls.html">Grid Left Sidebar</a></li>
                 <li><a href="shop-grid-rs.html">Grid Right Sidebar</a></li>
                 <li><a href="shop-grid-ns.html">Grid No Sidebar</a></li>
@@ -58,6 +67,9 @@
                 <span class="sub-menu-toggle" />
               </span>
               <ul class="offcanvas-submenu">
+                <li class="back-btn">
+                  <a href="#">Back</a>
+                </li>
                 <li><a href="shop-list-ls.html">List Left Sidebar</a></li>
                 <li><a href="shop-list-rs.html">List Right Sidebar</a></li>
                 <li><a href="shop-list-ns.html">List No Sidebar</a></li>
@@ -74,12 +86,18 @@
             <span class="sub-menu-toggle" />
           </span>
           <ul class="offcanvas-submenu">
+            <li class="back-btn">
+              <a href="#">Back</a>
+            </li>
             <li class="has-children">
               <span>
                 <a href="#">Men's Shoes</a>
                 <span class="sub-menu-toggle" />
               </span>
               <ul class="offcanvas-submenu">
+                <li class="back-btn">
+                  <a href="#">Back</a>
+                </li>
                 <li><a href="#">Sneakers</a></li>
                 <li><a href="#">Loafers</a></li>
                 <li><a href="#">Boat Shoes</a></li>
@@ -93,6 +111,9 @@
                 <span class="sub-menu-toggle" />
               </span>
               <ul class="offcanvas-submenu">
+                <li class="back-btn">
+                  <a href="#">Back</a>
+                </li>
                 <li><a href="#">Sandals</a></li>
                 <li><a href="#">Flats</a></li>
                 <li><a href="#">Sneakers</a></li>
@@ -106,6 +127,9 @@
                 <span class="sub-menu-toggle" />
               </span>
               <ul class="offcanvas-submenu">
+                <li class="back-btn">
+                  <a href="#">Back</a>
+                </li>
                 <li><a href="#">Shirts &amp; Tops</a></li>
                 <li><a href="#">Pants</a></li>
                 <li><a href="#">Jackets</a></li>
@@ -118,6 +142,9 @@
                 <span class="sub-menu-toggl" />
               </span>
               <ul class="offcanvas-submenu">
+                <li class="back-btn">
+                  <a href="#">Back</a>
+                </li>
                 <li><a href="#">Dresses</a></li>
                 <li><a href="#">Shirts &amp; Tops</a></li>
                 <li><a href="#">Shorts</a></li>
@@ -131,6 +158,9 @@
                 <span class="sub-menu-toggle" />
               </span>
               <ul class="offcanvas-submenu">
+                <li class="back-btn">
+                  <a href="#">Back</a>
+                </li>
                 <li><a href="#">Handbags</a></li>
                 <li><a href="#">Backpacks</a></li>
                 <li><a href="#">Luggage</a></li>
@@ -144,6 +174,9 @@
                 <span class="sub-menu-toggle" />
               </span>
               <ul class="offcanvas-submenu">
+                <li class="back-btn">
+                  <a href="#">Back</a>
+                </li>
                 <li><a href="#">Sunglasses</a></li>
                 <li><a href="#">Hats</a></li>
                 <li><a href="#">Watches</a></li>
@@ -162,6 +195,9 @@
             <span class="sub-menu-toggle" />
           </span>
           <ul class="offcanvas-submenu">
+            <li class="back-btn">
+              <a href="#">Back</a>
+            </li>
             <li><a href="account-login.html">Login / Register</a></li>
             <li><a href="account-password-recovery.html">Password Recovery</a></li>
             <li><a href="account-orders.html">Orders List</a></li>
@@ -189,6 +225,9 @@
                 <span class="sub-menu-toggle" />
               </span>
               <ul class="offcanvas-submenu">
+                <li class="back-btn">
+                  <a href="#">Back</a>
+                </li>
                 <li><a href="blog-rs.html">Blog Right Sidebar</a></li>
                 <li><a href="blog-ls.html">Blog Left Sidebar</a></li>
                 <li><a href="blog-ns.html">Blog No Sidebar</a></li>
@@ -202,6 +241,9 @@
                 <span class="sub-menu-toggle" />
               </span>
               <ul class="offcanvas-submenu">
+                <li class="back-btn">
+                  <a href="#">Back</a>
+                </li>
                 <li><a href="blog-single-rs.html">Post Right Sidebar</a></li>
                 <li><a href="blog-single-ls.html">Post Left Sidebar</a></li>
                 <li><a href="blog-single-ns.html">Post No Sidebar</a></li>
@@ -216,6 +258,9 @@
             </a>
             <span class="sub-menu-toggle" /></span>
           <ul class="offcanvas-submenu">
+            <li class="back-btn">
+              <a href="#">Back</a>
+            </li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="mobile-app.html">Unishop Mobile App</a></li>
             <li><a href="services.html">Services</a></li>
@@ -235,6 +280,9 @@
             </a>
             <span class="sub-menu-toggle" /></span>
           <ul class="offcanvas-submenu">
+            <li class="back-btn">
+              <a href="#">Back</a>
+            </li>
             <li><a href="components/accordion.html">Accordion</a></li>
             <li><a href="components/alerts.html">Alerts</a></li>
             <li><a href="components/buttons.html">Buttons</a></li>

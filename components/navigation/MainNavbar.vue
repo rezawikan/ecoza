@@ -12,11 +12,11 @@
     <div class="site-branding">
       <div class="inner">
         <!-- Off-Canvas Toggle (#shop-categories)-->
-        <a class="offcanvas-toggle cats-toggle" href="#shop-categories" data-toggle="offcanvas" @click.prevent="handleClick">
+        <a class="offcanvas-toggle cats-toggle" href="#shop-categories" data-toggle="offcanvas" @click.prevent="offcanvasOpen">
           <fa :icon="['fas', 'bars']" />
         </a>
         <!-- Off-Canvas Toggle (#mobile-menu)-->
-        <a class="offcanvas-toggle menu-toggle" href="#mobile-menu" data-toggle="offcanvas" @click.prevent="handleClick">
+        <a class="offcanvas-toggle menu-toggle" href="#mobile-menu" data-toggle="offcanvas" @click.prevent="offcanvasOpen">
           <fa :icon="['fas', 'bars']" />
         </a>
         <!-- Site Logo-->
@@ -547,16 +547,18 @@ export default {
       }
     })
 
-    this.stickyHeader()
+    addEventListener('scroll', () => {
+      this.handleSticky()
+      this.showScroll()
+    })
+
+    addEventListener('load', this.handleSticky)
+
     this.handleSubCategory()
     this.handleBackdrop()
   },
 
   methods: {
-    stickyHeader() {
-      addEventListener('scroll', this.handleSticky)
-      addEventListener('load', this.handleSticky)
-    },
     handleSticky() {
       const BODY = document.body
       const STICKY = document.querySelector('.navbar-sticky')
@@ -571,7 +573,16 @@ export default {
         BODY.style.paddingTop = 0
       }
     },
-    handleClick(e) {
+    showScroll() {
+      const SCROLL = document.querySelector('.scroll-to-top-btn')
+      console.log(window.scrollY)
+      if (window.scrollY > 600) {
+        SCROLL.classList.add('visible')
+      } else {
+        SCROLL.classList.remove('visible')
+      }
+    },
+    offcanvasOpen(e) {
       const BODY = document.body
       const ID = e.currentTarget.getAttribute('href')
       this.isActive = !document.querySelector(ID).classList.contains('active')
@@ -580,6 +591,17 @@ export default {
       BODY.style.overflow = this.isOverflow
       this.openCanvas = !BODY.classList.contains('offcanvas-open')
       this.openCanvas ? BODY.classList.add('offcanvas-open') : BODY.classList.remove('offcanvas-open')
+    },
+    offcanvasClose(e) {
+      const BODY = document.body
+      BODY.classList.remove('offcanvas-open')
+      setTimeout(() => {
+        BODY.style.overflow = 'visible'
+        const CONTAINER = document.querySelectorAll('.offcanvas-container')
+        CONTAINER.forEach((r) => {
+          r.classList.remove('active')
+        })
+      }, 100)
     },
     hasScrollbar() {
       // The Modern solution
@@ -632,7 +654,7 @@ export default {
       const ELEMENT = document.querySelectorAll('.offcanvas-toggle')
       BACKDROP.addEventListener('click', () => {
         ELEMENT.forEach((e) => {
-          //
+          this.offcanvasClose()
         })
       })
     }

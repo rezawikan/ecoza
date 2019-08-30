@@ -19,7 +19,8 @@
     "bootstrap-vue": "^2.0.0-rc.28",
     "nuxt": "^2.0.0",
     "nuxt-fontawesome": "^0.4.0",
-    "vue": "^2.6.10"
+    "vue": "^2.6.10",
+    "vue-scrollto": "^2.15.0"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^0.0.1",
