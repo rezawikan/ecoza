@@ -18,7 +18,12 @@
   visibility: hidden;
   z-index: 1;
   overflow-y: auto;
-  &.active { visibility: visible; }
+  opacity: 0;
+  transition: ease 1s;
+  &.active {
+    visibility: visible;
+    opacity: 1;
+  }
 }
 .offcanvas-header {
   padding: 28px 20px;

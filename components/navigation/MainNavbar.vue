@@ -16,7 +16,7 @@
           <fa :icon="['fas', 'bars']" />
         </a>
         <!-- Off-Canvas Toggle (#mobile-menu)-->
-        <a class="offcanvas-toggle menu-toggle" href="#mobile-menu" data-toggle="offcanvas">
+        <a class="offcanvas-toggle menu-toggle" href="#mobile-menu" data-toggle="offcanvas" @click.prevent="handleClick">
           <fa :icon="['fas', 'bars']" />
         </a>
         <!-- Site Logo-->
@@ -532,14 +532,109 @@
 
 <script>
 export default {
+  data() {
+    return {
+      isActive: false,
+      openCanvas: false,
+      isOverflow: ''
+    }
+  },
+
+  mounted() {
+    addEventListener('click', () => {
+      if (this.hasScrollbar()) {
+        document.body.classList.add('hasScrollbar')
+      }
+    })
+
+    this.stickyHeader()
+    this.handleSubCategory()
+    this.handleBackdrop()
+  },
+
   methods: {
+    stickyHeader() {
+      addEventListener('scroll', this.handleSticky)
+      addEventListener('load', this.handleSticky)
+    },
+    handleSticky() {
+      const BODY = document.body
+      const STICKY = document.querySelector('.navbar-sticky')
+      const TOPBAR = document.querySelector('.topbar')
+      if (window.scrollY > TOPBAR.clientHeight) {
+        STICKY.classList.add('navbar-stuck')
+        if (!STICKY.classList.contains('navbar-ghost')) {
+          BODY.style.paddingTop = STICKY.clientHeight
+        }
+      } else {
+        STICKY.classList.remove('navbar-stuck')
+        BODY.style.paddingTop = 0
+      }
+    },
     handleClick(e) {
       const BODY = document.body
-      const ID = e.target.getAttribute('href')
-      document.querySelector(ID).classList.add('active')
-      // console.log(document.querySelector(ID))
-      BODY.style.overflow = 'hidden'
-      BODY.classList.add('offcanvas-open')
+      const ID = e.currentTarget.getAttribute('href')
+      this.isActive = !document.querySelector(ID).classList.contains('active')
+      this.isActive ? document.querySelector(ID).classList.add('active') : document.querySelector(ID).classList.remove('active')
+      this.isOverflow = BODY.style.overflow === 'hidden' ? 'visible' : 'hidden'
+      BODY.style.overflow = this.isOverflow
+      this.openCanvas = !BODY.classList.contains('offcanvas-open')
+      this.openCanvas ? BODY.classList.add('offcanvas-open') : BODY.classList.remove('offcanvas-open')
+    },
+    hasScrollbar() {
+      // The Modern solution
+      if (typeof window.innerWidth === 'number') {
+        return window.innerWidth > document.documentElement.clientWidth
+      }
+      // rootElem for quirksmode
+      const rootElem = document.documentElement || document.body
+      // Check overflow style property on body for fauxscrollbars
+      let overflowStyle
+      if (typeof rootElem.currentStyle !== 'undefined') {
+        overflowStyle = rootElem.currentStyle.overflow
+      }
+      overflowStyle = overflowStyle || window.getComputedStyle(rootElem, '').overflow
+      // Also need to check the Y axis overflow
+      let overflowYStyle
+      if (typeof rootElem.currentStyle !== 'undefined') {
+        overflowYStyle = rootElem.currentStyle.overflowY
+      }
+      overflowYStyle = overflowYStyle || window.getComputedStyle(rootElem, '').overflowY
+      const contentOverflows = rootElem.scrollHeight > rootElem.clientHeight
+      const overflowShown = /^(visible|auto)$/.test(overflowStyle) || /^(visible|auto)$/.test(overflowYStyle)
+      const alwaysShowScroll = overflowStyle === 'scroll' || overflowYStyle === 'scroll'
+      return (contentOverflows && overflowShown) || (alwaysShowScroll)
+    },
+    handleSubCategory() {
+      const CHILD = document.querySelectorAll('.has-children .sub-menu-toggle')
+      const BACK = document.querySelectorAll('.back-btn')
+
+      CHILD.forEach((a) => {
+        a.addEventListener('click', (e) => {
+          const PARENT = e.target.parentNode.parentNode.parentNode
+          PARENT.classList.add('off-view')
+          const MENU = e.target.parentNode.nextElementSibling
+          MENU.classList.add('in-view')
+        })
+      })
+
+      BACK.forEach((b) => {
+        b.addEventListener('click', (e) => {
+          const SUBMENU = e.target.parentNode.parentNode
+          SUBMENU.classList.remove('in-view')
+          const PARENTMENU = e.target.parentNode.parentNode.parentNode.parentNode
+          PARENTMENU.classList.remove('off-view')
+        })
+      })
+    },
+    handleBackdrop() {
+      const BACKDROP = document.querySelector('.site-backdrop')
+      const ELEMENT = document.querySelectorAll('.offcanvas-toggle')
+      BACKDROP.addEventListener('click', () => {
+        ELEMENT.forEach((e) => {
+          //
+        })
+      })
     }
   }
 }
