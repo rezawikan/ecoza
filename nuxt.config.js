@@ -84,7 +84,7 @@ export default {
 		component: 'fa',
 		imports: [{
 				set: '@fortawesome/free-solid-svg-icons',
-				icons: ['faEnvelope', 'faPhone', 'faDownload', 'faTimes', 'faSearch', 'faSignOutAlt', 'faUser', 'faShoppingBasket', 'faBars']
+				icons: ['faEnvelope', 'faPhone', 'faDownload', 'faTimes', 'faSearch', 'faSignOutAlt', 'faUser', 'faShoppingBasket', 'faBars', 'faLock']
 			},
 			{
 				set: '@fortawesome/free-brands-svg-icons',

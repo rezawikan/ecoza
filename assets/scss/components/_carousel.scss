@@ -101,6 +101,14 @@
     width: 100%;
     &.owl-lazy { transform-style: preserve-3d; }
 	}
+  .owl-nav {
+    margin: 0 !important;
+    [class*='owl-'] {
+      padding: 0 !important;
+      border-radius: 50% !important;
+    }
+  }
+
   .owl-nav.disabled,
   .owl-dots.disabled {
     display: none;
@@ -111,6 +119,9 @@
     cursor: pointer;
     cursor: hand;
     user-select: none;
+    span {
+      background-color: transparent !important;
+    }
 	}
   &.owl-loaded { display: block; }
   &.owl-loading {
@@ -202,7 +213,7 @@
     .owl-prev { left: 30px; }
     .owl-next { right: 30px; }
   }
-  &.dots-inside {
+  // .dots-inside {
     .owl-dots {
       position: absolute;
       bottom: 0;
@@ -216,11 +227,11 @@
     }
     .owl-prev,
     .owl-next { margin-top: -($carousel-navs-size / 2); }
-    &.large-controls {
+    // .large-controls {
       .owl-prev,
       .owl-next { margin-top: -($btn-lg-height / 2); }
-    }
-  }
+    // }
+  // }
 
   // Widget inside
   .widget {
@@ -251,9 +262,9 @@
     size: cover;
   }
   overflow: hidden;
-  > .owl-carousel {
+  .owl-carousel {
     min-height: $hero-slider-min-height;
-    &.dots-inside {
+    // .dots-inside {
       .owl-dots {
         display: inline-block;
         left: 50%;
@@ -264,7 +275,7 @@
         border-top-right-radius: $border-radius-lg;
         background-color: $gray-dark;
       }
-    }
+    // }
     .owl-prev,
     .owl-next { transition: all .35s ease-in-out; }
     .owl-prev { transform: translateX(-150px); }

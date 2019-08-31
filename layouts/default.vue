@@ -4,7 +4,9 @@
     <Desktop />
     <TopNavbar />
     <MainNavbar />
-    <nuxt />
+    <div class="offcanvas-wrapper">
+      <nuxt />
+    </div>
     <Last />
   </div>
 </template>

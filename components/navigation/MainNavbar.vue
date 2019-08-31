@@ -1,11 +1,11 @@
 <template lang="html">
   <header class="navbar navbar-sticky">
     <form class="site-search" method="get">
-      <input type="text" name="site_search" placeholder="Type to search...">
+      <input v-model="search" type="text" placeholder="Type to search...">
       <div class="search-tools">
         <span class="clear-search">Clear</span>
         <span class="close-search">
-          <fa :icon="['fas', 'search']" />
+          <fa :icon="['fas', 'times']" />
         </span>
       </div>
     </form>
@@ -459,7 +459,7 @@
               </li>
               <li>
                 <a href="#">
-                  <i class="icon-unlock">&nbsp;</i>Logout
+                  <fa :icon="['fas', 'lock']" /> Logout
                 </a>
               </li>
             </ul>
@@ -536,7 +536,8 @@ export default {
     return {
       isActive: false,
       openCanvas: false,
-      isOverflow: ''
+      isOverflow: '',
+      search: ''
     }
   },
 
@@ -556,6 +557,7 @@ export default {
 
     this.handleSubCategory()
     this.handleBackdrop()
+    this.handleSearch()
   },
 
   methods: {
@@ -647,6 +649,21 @@ export default {
           const PARENTMENU = e.target.parentNode.parentNode.parentNode.parentNode
           PARENTMENU.classList.remove('off-view')
         })
+      })
+    },
+    handleSearch() {
+      const SEARCH = document.querySelector('.tools .search')
+      const VISIBLE = document.querySelector('.site-search')
+      const CLOSE = document.querySelector('.close-search')
+      const CLEAR = document.querySelector('.clear-search')
+      SEARCH.addEventListener('click', () => {
+        VISIBLE.classList.add('search-visible')
+      })
+      CLOSE.addEventListener('click', () => {
+        VISIBLE.classList.remove('search-visible')
+      })
+      CLEAR.addEventListener('click', () => {
+        this.search = ''
       })
     },
     handleBackdrop() {
