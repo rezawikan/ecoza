@@ -14,13 +14,14 @@
   },
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "^5.10.2",
+    "@fortawesome/free-regular-svg-icons": "^5.10.2",
     "@fortawesome/free-solid-svg-icons": "^5.10.2",
     "bootstrap": "^4.3.1",
     "bootstrap-vue": "^2.0.0-rc.28",
     "nuxt": "^2.0.0",
     "nuxt-fontawesome": "^0.4.0",
+    "v-owl-carousel": "github:rezawikan/v-owl-carousel",
     "vue": "^2.6.10",
-    "vue-owl-carousel": "^2.0.3",
     "vue-scrollto": "^2.15.0"
   },
   "devDependencies": {
@@ -32,15 +33,15 @@
     "eslint": "^5.15.1",
     "eslint-config-standard": ">=12.0.0",
     "eslint-plugin-import": ">=2.16.0",
-    "eslint-plugin-jest": ">=22.3.0",
-    "eslint-plugin-node": ">=8.0.1",
+    "eslint-plugin-jest": "^22.16.0",
+    "eslint-plugin-node": "^9.2.0",
     "eslint-plugin-nuxt": ">=0.4.2",
     "eslint-plugin-promise": ">=4.0.1",
     "eslint-plugin-standard": ">=4.0.0",
     "eslint-plugin-vue": "^5.2.2",
     "node-sass": "^4.12.0",
     "nodemon": "^1.18.9",
-    "pug": "^2.0.3",
+    "pug": "^2.0.4",
     "pug-plain-loader": "^1.0.0",
     "sass-loader": "^7.3.1"
   }

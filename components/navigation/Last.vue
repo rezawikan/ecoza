@@ -2,7 +2,7 @@
   <div>
     <!-- Back To Top Button-->
     <a v-scroll-to="scrollto" class="scroll-to-top-btn" href="#">
-      <i class="icon-arrow-up" />
+      <fa :icon="['fas', 'arrow-up']" />
     </a>
     <!-- Backdrop-->
     <div class="site-backdrop" />
