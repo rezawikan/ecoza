@@ -16,7 +16,7 @@
   background-color: $white-color;
   line-height: $line-height-base;
   box-shadow: $sub-menu-shadow;
-  
+
   > li {
     display: block;
     position: relative;
@@ -155,7 +155,7 @@
 %offcanvas-menu {
   position: relative;
   width: 100%;
-  overflow: hidden;
+  // overflow: hidden;
   ul {
     margin: 0;
     padding: 0;
