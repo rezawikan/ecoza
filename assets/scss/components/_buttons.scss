@@ -244,7 +244,7 @@ button:focus { outline: none; }
     bottom: -($btn-sm-height * 2);
     width: $btn-sm-height;
     height: $btn-sm-height;
-    line-height: ($btn-sm-height - 5);
+    // line-height: ($btn-sm-height - 5);
   }
 }
 

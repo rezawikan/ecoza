@@ -5,7 +5,8 @@
 .form-control {
   padding: 0 18px 3px;
   border: 1px solid darken($border-color, 2%);
-  border-radius: ceil($input-height / 2);
+  border-radius: ceil($input-height / 2) !important;
+  width: 100% !important;
   background-color: $white-color;
   color: $gray-dark;
   font: {
@@ -246,6 +247,9 @@ select.form-control.form-control-sm {
       margin-top: -6px;
       font-size: 1.5em;
     }
+  }
+  svg {
+    vertical-align: middle;
   }
   .form-text { padding-top: floor($grid-vertical-step / 2); }
 }

@@ -238,16 +238,20 @@
         </div>
       </div>
     </section>
+
+    <PopularBrands />
   </div>
 </template>
 
 <script>
 import TopSlider from '@/components/carousel/TopSlider'
 import FeaturedProducts from '@/components/carousel/FeaturedProducts'
+import PopularBrands from '@/components/carousel/PopularBrands'
 export default {
   components: {
     TopSlider,
-    FeaturedProducts
+    FeaturedProducts,
+    PopularBrands
   }
 }
 </script>

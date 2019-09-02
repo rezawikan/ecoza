@@ -11,7 +11,6 @@
         :autoplay="autoplay"
         :autoplay-timeout="autoplayTimeout"
         :margin="margin"
-        :loaded-class="`owl-carousel large-controls dots-inside owl-loaded`"
       >
         <div class="grid-item">
           <div class="product-card">
@@ -33,14 +32,8 @@
               </button>
               <button
                 class="btn btn-outline-primary btn-sm"
-                data-toast
-                data-toast-type="success"
-                data-toast-position="topRight"
-                data-toast-icon="icon-circle-check"
-                data-toast-title="Product"
-                data-toast-message="successfuly added to cart!"
               >
-                Add to Cart
+                View Detail
               </button>
             </div>
           </div>
@@ -65,23 +58,11 @@
               $155.00
             </h4>
             <div class="product-buttons">
-              <button
-                class="btn btn-outline-secondary btn-sm btn-wishlist"
-                data-toggle="tooltip"
-                title="Whishlist"
-              >
+              <button class="btn btn-outline-secondary btn-sm btn-wishlist">
                 <fa :icon="['fas', 'heart']" />
               </button>
-              <button
-                class="btn btn-outline-primary btn-sm"
-                data-toast
-                data-toast-type="success"
-                data-toast-position="topRight"
-                data-toast-icon="icon-circle-check"
-                data-toast-title="Product"
-                data-toast-message="successfuly added to cart!"
-              >
-                Add to Cart
+              <button class="btn btn-outline-primary btn-sm">
+                View Detail
               </button>
             </div>
           </div>
@@ -99,19 +80,11 @@
               $49.50
             </h4>
             <div class="product-buttons">
-              <button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist">
+              <button class="btn btn-outline-secondary btn-sm btn-wishlist">
                 <fa :icon="['fas', 'heart']" />
               </button>
-              <button
-                class="btn btn-outline-primary btn-sm"
-                data-toast
-                data-toast-type="success"
-                data-toast-position="topRight"
-                data-toast-icon="icon-circle-check"
-                data-toast-title="Product"
-                data-toast-message="successfuly added to cart!"
-              >
-                Add to Cart
+              <button class="btn btn-outline-primary btn-sm">
+                View Detail
               </button>
             </div>
           </div>
@@ -136,19 +109,11 @@
               $90.00
             </h4>
             <div class="product-buttons">
-              <button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist">
+              <button class="btn btn-outline-secondary btn-sm btn-wishlist">
                 <fa :icon="['fas', 'heart']" />
               </button>
-              <button
-                class="btn btn-outline-primary btn-sm"
-                data-toast
-                data-toast-type="success"
-                data-toast-position="topRight"
-                data-toast-icon="icon-circle-check"
-                data-toast-title="Product"
-                data-toast-message="successfuly added to cart!"
-              >
-                Add to Cart
+              <button class="btn btn-outline-primary btn-sm">
+                View Detail
               </button>
             </div>
           </div>
@@ -166,19 +131,11 @@
               $47.00
             </h4>
             <div class="product-buttons">
-              <button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist">
+              <button class="btn btn-outline-secondary btn-sm btn-wishlist">
                 <fa :icon="['fas', 'heart']" />
               </button>
-              <button
-                class="btn btn-outline-primary btn-sm"
-                data-toast
-                data-toast-type="success"
-                data-toast-position="topRight"
-                data-toast-icon="icon-circle-check"
-                data-toast-title="Product"
-                data-toast-message="successfuly added to cart!"
-              >
-                Add to Cart
+              <button class="btn btn-outline-primary btn-sm">
+                View Detail
               </button>
             </div>
           </div>
@@ -199,19 +156,11 @@
               <del>$99.99</del>$49.99
             </h4>
             <div class="product-buttons">
-              <button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="Whishlist">
+              <button class="btn btn-outline-secondary btn-sm btn-wishlist">
                 <fa :icon="['fas', 'heart']" />
               </button>
-              <button
-                class="btn btn-outline-primary btn-sm"
-                data-toast
-                data-toast-type="success"
-                data-toast-position="topRight"
-                data-toast-icon="icon-circle-check"
-                data-toast-title="Product"
-                data-toast-message="successfuly added to cart!"
-              >
-                Add to Cart
+              <button class="btn btn-outline-primary btn-sm">
+                View Detail
               </button>
             </div>
           </div>
