@@ -18,8 +18,10 @@
     "@fortawesome/free-solid-svg-icons": "^5.10.2",
     "bootstrap": "^4.3.1",
     "bootstrap-vue": "^2.0.0-rc.28",
+    "npm": "^6.11.2",
     "nuxt": "^2.0.0",
     "nuxt-fontawesome": "^0.4.0",
+    "nuxt-i18n": "^6.1.1",
     "v-owl-carousel": "github:rezawikan/v-owl-carousel",
     "vue": "^2.6.10",
     "vue-scrollto": "^2.15.0"

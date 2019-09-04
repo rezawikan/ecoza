@@ -1,5 +1,12 @@
 export default {
   mode: 'universal',
+  env: {
+    baseUrl: process.env.BASE_URL || 'http://localhost:3000'
+  },
+  router: {
+    // Run the middleware/user-agent.js on every page
+    middleware: 'breadcrumbs'
+  },
   /*
    ** Headers of the page
    */
@@ -49,7 +56,7 @@ export default {
       },
     ],
     script: [{
-      src: 'js/modernizr.min.js'
+      src: process.env.baseUrl+'/js/modernizr.min.js'
     }]
   },
   /*
@@ -80,7 +87,8 @@ export default {
   modules: [
     '@nuxtjs/eslint-module',
     'nuxt-fontawesome',
-    'vue-scrollto/nuxt'
+    'vue-scrollto/nuxt',
+    'nuxt-i18n'
   ],
 
   // fontawesome configuration
@@ -90,15 +98,64 @@ export default {
         set: '@fortawesome/free-solid-svg-icons',
         icons: ['faEnvelope', 'faPhone', 'faDownload', 'faTimes', 'faSearch', 'faSignOutAlt', 'faUser', 'faShoppingBasket', 'faBars', 'faLock', 'faHeart', 'faArrowUp']
       },
-      // {
-      //   set: '@fortawesome/free-regular-svg-icons',
-      //   icons: ['faHeart']
-      // },
       {
         set: '@fortawesome/free-brands-svg-icons',
         icons: ['faFacebookF', 'faYoutube', 'faInstagram', 'faTwitter', 'faPinterest']
       }
     ]
+  },
+
+  i18n: {
+    locales: [{
+        name: 'ID',
+        code: 'id',
+        iso: 'id-ID',
+        file: 'id-ID.js'
+      },
+      {
+        name: 'EN',
+        code: 'en',
+        iso: 'en-US',
+        file: 'en-US.js'
+      },
+    ],
+    seo: true,
+    strategy: 'prefix_and_default',
+    lazy: true,
+    defaultLocale: 'id',
+    langDir: 'lang/',
+    defaultLocaleRouteNameSuffix: 'default',
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'ecoza_cookie'
+    },
+    // By default a store module is registered and kept in sync with the
+    // app's i18n current state
+    // Set to false to disable
+    vuex: {
+      // Module namespace
+      moduleName: 'i18n',
+
+      // If enabled, current app's locale is synced with nuxt-i18n store module
+      syncLocale: true,
+
+      // If enabled, current translation messages are synced with nuxt-i18n store module
+      syncMessages: true,
+
+      // Mutation to commit to set route parameters translations
+      syncRouteParams: true
+    },
+    parsePages: false,
+    pages: {
+      'products/index': {
+        en: '/products',
+        id: '/produk'
+      },
+      'products/detail/index': {
+        en: '/products/detail',
+        id: '/produk/detail'
+      },
+    }
   },
   /*
    ** Build configuration
